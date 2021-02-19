@@ -11,3 +11,6 @@ services:
   - mysql
 before_install:
   - mysql -e 'CREATE DATABASE IF NOT EXISTS testdb;'
+script:
+  - echo 'no test right now'
+
