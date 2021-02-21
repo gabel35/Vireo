@@ -20,6 +20,7 @@ app.use(express.json());
 
 // Static directory
 app.use(express.static("views"));
+app.use(express.static(__dirname + '/public'));
 
 // Syncing our sequelize models and then starting our Express app
 
