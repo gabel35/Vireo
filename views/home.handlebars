@@ -1,14 +1,27 @@
 <div class="card">
-  <div class="card-body">
-    <h5 class="card-title">Vireo</h5>
-    <p class="card-text">Where are you going next?</p>
-    <button class="btn btn-dark" id="countrySpa">Spain</button>
-    <button class="btn btn-dark" id="countryFra">France</button>
-    <button class="btn btn-dark" id="countryUS">United States</button>
-    <button class="btn btn-dark" id="countryRus">Russia</button>
-    <button class="btn btn-dark" id="countryMex">Mexico</button>
-    <button class="btn btn-dark" id="countryDR">Dominican Republic</button>
-  </div>
+    <div class="card-body center">
+        <h5 class="card-title logo"><img class="img-fluid hover" style="width:75px;" src="assets/img/vireo.png"
+                alt="#">Vireo</h5>
+        <h1 class="card-text">what's your next adventure?</h1>
+
+
+        <h2 class="sentence">I'm going to
+            <div class="verticalFlip">
+                <span class="rotatingText-adjective">Spain.</span>
+                <span class="rotatingText-adjective">Mexico.</span>
+                <span class="rotatingText-adjective">United States.</span>
+                <span class="rotatingText-adjective">China.</span>
+                <span class="rotatingText-adjective">Japan.</span>
+            </div>
+        </h2>
+
+        <button class="btn btn-dark" id="countrySpa">Spain</button>
+        <button class="btn btn-dark" id="countryFra">France</button>
+        <button class="btn btn-dark" id="countryUS">United States</button>
+        <button class="btn btn-dark" id="countryRus">Russia</button>
+        <button class="btn btn-dark" id="countryMex">Mexico</button>
+        <button class="btn btn-dark" id="countryDR">Dominican Republic</button>
+    </div>
 </div>
 
 <hr>
@@ -17,23 +30,31 @@
     <!-- Pictures -->
     <div class="row ">
         <div class="col-lg-4">
-          <img class="img-fluid hover" src="assets/img/oregon.jpg" alt="#">
-          <img class="img-fluid hover" src="assets/img/oregon.jpg" alt="#">
-          <img class="img-fluid hover" src="assets/img/oregon.jpg" alt="#">
+            {{!-- <img class="img-fluid hover" src="assets/img/vireo.png" alt="#">
+            <img class="img-fluid hover" src="assets/img/oregon.jpg" alt="#">
+            <img class="img-fluid hover" src="assets/img/oregon.jpg" alt="#"> --}}
         </div>
-    <!-- Country info -->
+        <!-- Country info -->
         <div class="col-lg-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Travel Restrictions</h5>
+                    <h1 class="card-title">Travel Restrictions</h1>
                     <div class="card-body">
                         (api results)
                     </div>
                 </div>
             </div>
+             <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">Currency</h1>
+                    <div class="card-body">
+                        (API currency)
+                    </div>
+                </div>
+            </div>
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Language: </h5>
+                    <h1 class="card-title">Language: </h1>
                     <div class="card-body">
                         (translated key phrases)
                     </div>
@@ -41,7 +62,7 @@
             </div>
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Fun Fact</h5>
+                    <h1 class="card-title">Fun Fact</h1>
                     <div class="card-body">
                         (fun facts)
                     </div>
@@ -52,7 +73,7 @@
         <div class="col-lg-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Top 5 Sightseeing Spots</h5>
+                    <h1 class="card-title">Top 5 Sightseeing Spots</h1>
                     <div class="card-body">
                         (spots)
                     </div>
@@ -60,7 +81,7 @@
             </div>
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Top 5 Restaurants</h5>
+                    <h1 class="card-title">Top 5 Restaurants</h1>
                     <div class="card-body">
                         (restaurants)
                     </div>
@@ -68,14 +89,20 @@
             </div>
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Top 5 Museums</h5>
+                    <h1 class="card-title">Top 5 Museums</h1>
                     <div class="card-body">
                         (museums)
                     </div>
                 </div>
             </div>
+           
         </div>
     </div>
+</div>
+
+<div class="wrapper">
+<button class="btn book">Book a Hotel</button>
+<button class="btn book">Book a Ticket</button>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
