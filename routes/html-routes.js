@@ -6,15 +6,19 @@ module.exports = (app) => {
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
   // rid of line 8
-  // cms route loads cms.html
-  app.get("/cms", (req, res) =>
-    res.sendFile(path.join(__dirname, "../public/cms.html"))
-  );
+  app.get("/", (req, res) => {
+    res.render("Home");
+  });
 
-  // blog route loads blog.html
-  app.get("/blog", (req, res) =>
-    res.sendFile(path.join(__dirname, "../public/blog.html"))
-  );
+  // blog route loads blog.handlebars
+  app.get("/blog", (req, res) => {
+    res.render("Blog");
+  });
+
+  // new post route that loads new.handlebars
+  app.get("/new", (req, res) => {
+    res.render("New");
+  });
 
   // authors route loads author-manager.html
   app.get("/authors", (req, res) =>
