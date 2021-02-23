@@ -1,28 +1,33 @@
 <h1>VIREO</h1>
 
-  {{!-- <div class="container">
-    <div class="row mt-4">
-      <div class="col-md-4">
-        <div class="form-group">
-          <select class="custom-select" id="category">
-            <option selected value="">All Categories</option>
-            <option value="Personal">Personal</option>
-            <option value="Product Review">Product Review</option>
-            <option value="Political">Political</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-md-2">
-        <a class="btn btn-light" href="/cms">New Post</a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 blog-container">
-      </div>
-    </div>
-  </div> --}}
-
 <!-- Blog Posts -->
+
+
+{{#each post}}
+<div class="card mb-3">
+  <div class="row">
+    <div class="col-md-4">
+      <img class="img-fluid" src="<%= post.image %> " />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= post.title %></h5>
+        <p><h5 class="card-text"><%= post.description %></h5></p>
+        <p class="card-text">
+          <small class="text-muted"><%= post.location %> </small>
+        </p>
+        <a class="btn btn-primary" href="/blog/<%= post._id %> ">View <%= post.title %> </a>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+
+
+
+
+
+
 <div class="container-sm container-md container-lg container-xl">
     <div class="row ">
         <div class="col-lg-4">
@@ -58,4 +63,4 @@
 </div>
 
   <!-- Custom Script -->
-  <script src="js/blog.js" type="text/javascript"></script>
+<script src="/assets/js/blog.js" type="text/javascript"></script>
