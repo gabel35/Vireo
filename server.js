@@ -8,7 +8,7 @@ require("dotenv").config();
 const db = require("./models");
 
 const htmlRouter = require("./routes/html-routes.js");
-// const authorRouter = require("./routes/author-api-routes.js");
+const authorRouter = require("./routes/author-api-routes.js");
 const apiRouter = require("./routes/post-api-routes.js");
 
 // Sets up the Express App
@@ -28,7 +28,7 @@ app.use(express.static(__dirname + "/public"));
 
 // Invoke routes
 htmlRouter(app);
-// authorRouter(app);
+authorRouter(app);
 apiRouter(app);
 
 // Syncing our sequelize models and then starting our Express app

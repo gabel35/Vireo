@@ -7,22 +7,10 @@ module.exports = (sequelize, DataTypes) => {
         len: [1],
       },
     },
-    location: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      len: [1],
-    },
-    image: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      len: [1],
-    },
-    description: {
+    body: {
       type: DataTypes.TEXT,
       allowNull: false,
-      validate: {
-        len: [1],
-      },
+      len: [1],
     },
   });
 
