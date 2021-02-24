@@ -90,7 +90,13 @@
                 <div class="card-body">
                     <h1 class="card-title">Top 5 Museums</h1>
                     <div class="card-body">
-                        (museums)
+                        <ul>
+                            {{#each museums}}
+                            <li>
+                                <p>{{museum}}</p>
+                            </li>
+                            {{/each}}
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -106,3 +112,4 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="assets/js/countries.js"></script>
+<script src="/assets/js/top5museums.js"></script>
