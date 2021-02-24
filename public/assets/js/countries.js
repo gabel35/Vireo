@@ -8,17 +8,28 @@ $("#countrySpa").on("click", function(event) {
     // for (let i = 0; i<bgImgs.length; i++){
         var carouselImgs = `
         <div class="carousel-item active">
-           <img src="assets/img/Spain/spain1.jpg" class="d-block w-100" alt="First slide">
-        </div>
-        <div class="carousel-item">
-            <img src="assets/img/Spain/spain2.jpg" class="d-block w-100" alt="2 slide">
-        </div>
-        <div class="carousel-item">
-            <img src="assets/img/Spain/spain3.jpg" class="d-block w-100" alt="3 slide">
-        </div>
-        <div class="carousel-item">
-            <img src="assets/img/Spain/spain4.jpg" class="d-block w-100" alt="4 slide">
-        </div>`;
+        <img class="d-block w-100" src="assets/img/Russia/Russia (1).jpg"
+          alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="assets/img/Russia/Russia (2).jpg"
+          alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="assets/img/Russia/Russia (3).jpg"
+          alt="Third slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="assets/img/Russia/Russia (4).jpg"
+          alt="Third slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="assets/img/Russia/Russia (5).jpg"
+          alt="Third slide">
+      </div>
+      `
+       
+        ;
         console.log(carouselImgs)
         carouselDiv.append(carouselImgs);
         
