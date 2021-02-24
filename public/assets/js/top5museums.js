@@ -8,7 +8,9 @@ const museums = [
   {
     museum: "Whitney",
   },
-  { museum: "Van Gogh" },
+  {
+    museum: "Van Gogh",
+  },
 ];
 
 module.exports = museums;

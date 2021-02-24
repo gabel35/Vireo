@@ -70,17 +70,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // "Go to posts" link
     const postsLink = document.createElement("td");
-    postsLink.innerHTML = `<td><a href='/blog?author_id=${authorData.id}'>Go to Posts</a></td>`;
+    postsLink.innerHTML = `<td><a class='btn btn-info' href='/blog?author_id=${authorData.id}'>Go to Posts</a></td>`;
     tr.appendChild(postsLink);
 
     // "Create a post" link
     const createLink = document.createElement("td");
-    createLink.innerHTML = `<td><a href='/cms?author_id=${authorData.id}'>Create a Post</a></td>`;
+    createLink.innerHTML = `<td><a class='btn btn-info' href='/cms?author_id=${authorData.id}'>Create a Post</a></td>`;
     tr.appendChild(createLink);
 
     // "Delete author" link
     const deleteLink = document.createElement("td");
-    deleteLink.innerHTML = `<td><a style='cursor:pointer;color:red' class='delete-author'>Delete Author</a></td>`;
+    deleteLink.innerHTML = `<td><a style='cursor:pointer;color:white' class='delete-author btn btn-danger'>Delete Author</a></td>`;
     deleteLink.addEventListener("click", handleDeleteButtonPress);
     tr.appendChild(deleteLink);
 
