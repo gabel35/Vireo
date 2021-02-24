@@ -1,39 +1,37 @@
 //grabbing api info for travel restrictions and appending it//
-$("#countrySpa").on("click", function(event) {
+$("#countryRus").on("click", function(event) {
     event.preventDefault();
-    var countryName = $("#countrySpa").text();
+    var countryName = $("#countryRus").text();
     console.log(countryName);
-    // var bgImgs = [1,2,3,4,5,6,7];
-    var carouselDiv = $(".carousel-inner")
-    // for (let i = 0; i<bgImgs.length; i++){
-        var carouselImgs = `
-        <div class="carousel-item active">
-        <img class="d-block w-100" src="assets/img/Russia/Russia (1).jpg"
-          alt="First slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="assets/img/Russia/Russia (2).jpg"
-          alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="assets/img/Russia/Russia (3).jpg"
-          alt="Third slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="assets/img/Russia/Russia (4).jpg"
-          alt="Third slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="assets/img/Russia/Russia (5).jpg"
-          alt="Third slide">
-      </div>
-      `
-       
-        ;
-        console.log(carouselImgs)
-        carouselDiv.append(carouselImgs);
+    var bgImgs = [
         
-    // }
+        "assets/img/Russia/Russia(1).jpg", 
+        "assets/img/Russia/Russia(2).jpg",
+        "assets/img/Russia/Russia(3).jpg",
+        "assets/img/Russia/Russia(4).jpg",
+        "assets/img/Russia/Russia(5).jpg",
+    
+    ];
+    var carouselDiv = $(".carousel-inner")
+
+
+    for (let i = 0; i<bgImgs.length; i++){
+     
+    
+        // console.log(carouselImgs)
+        // carouselDiv.append(carouselImgs);
+
+        var showImg = `<div class="carousel-item">
+           <img class="d-block w-100" id="image-${i}" src=${bgImgs[i]}>
+        </div>`
+
+        carouselDiv.append(showImg)
+
+    
+    }
+ $("#image-0").addClass("active")
+
+
 })
 
 
@@ -50,11 +48,11 @@ $("#countryUS").on("click", function(event) {
     console.log(countryName);
 })
 
-$("#countryRus").on("click", function(event) {
-    event.preventDefault();
-    var countryName = $("#countryRus").text();
-    console.log(countryName);
-})
+// $("#countryRus").on("click", function(event) {
+//     event.preventDefault();
+//     var countryName = $("#countryRus").text();
+//     console.log(countryName);
+// })
 
 $("#countryMex").on("click", function(event) {
     event.preventDefault();
