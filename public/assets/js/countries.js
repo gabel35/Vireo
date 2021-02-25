@@ -3,27 +3,34 @@ $("#countrySpa").on("click", function(event) {
     event.preventDefault();
     var countryName = $("#countrySpa").text();
     console.log(countryName);
-    // var bgImgs = [1,2,3,4,5,6,7];
-    var carouselDiv = $(".carousel-inner")
-    // for (let i = 0; i<bgImgs.length; i++){
-        var carouselImgs = `
-        <div class="carousel-item active">
-           <img src="assets/img/Spain/spain1.jpg" class="d-block w-100" alt="First slide">
-        </div>
-        <div class="carousel-item">
-            <img src="assets/img/Spain/spain2.jpg" class="d-block w-100" alt="2 slide">
-        </div>
-        <div class="carousel-item">
-            <img src="assets/img/Spain/spain3.jpg" class="d-block w-100" alt="3 slide">
-        </div>
-        <div class="carousel-item">
-            <img src="assets/img/Spain/spain4.jpg" class="d-block w-100" alt="4 slide">
-        </div>`;
-        console.log(carouselImgs)
-        carouselDiv.append(carouselImgs);
-        
-    // }
-})
+        var queryURL = "https://restcountries.eu/rest/v2/name/" + countryName;
+        console.log(queryURL);
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(response){
+            console.log(response)
+                var curDiv = $("#currencyDiv");
+                $("#currencyDiv").attr("class", "card");            
+                    //grabbing all currencies that the country uses and their info//
+                var countryCurrency = {
+                    code: response[0].currencies[0].code,
+                    name: response[0].currencies[0].name,
+                    symbol: response[0].currencies[0].symbol
+                };
+                var appendResults = `
+                <div class="card-body">
+                    <h1 class="card-title">Currency</h1>
+                        <div class="card-body">
+                            <p> Code: ${countryCurrency.code}</p>
+                            <p> Name: ${countryCurrency.name}</p>
+                            <p> Symbol: ${countryCurrency.symbol}</p>
+                        </div>
+                </div>
+                    `;
+                curDiv.append(appendResults);
+        });
+});
 
 
 
