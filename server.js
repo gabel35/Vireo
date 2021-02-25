@@ -5,11 +5,11 @@ const exphbs = require("express-handlebars");
 // const path = require("path");
 require("dotenv").config();
 // Requiring our models for syncing
-const db = require("./models");
 
 const htmlRouter = require("./routes/html-routes.js");
-// const authorRouter = require("./routes/author-api-routes.js");
+const authorRouter = require("./routes/author-api-routes.js");
 const apiRouter = require("./routes/post-api-routes.js");
+const seedHelper = require("./routes/seed-helper-routes");
 
 // Sets up the Express App
 const app = express();
@@ -23,13 +23,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Static directory
+const db = require("./models");
 app.use(express.static("views"));
 app.use(express.static(__dirname + "/public"));
 
 // Invoke routes
 htmlRouter(app);
-// authorRouter(app);
+authorRouter(app);
 apiRouter(app);
+seedHelper(app);
 
 // Syncing our sequelize models and then starting our Express app
 db.sequelize.sync({ force: true }).then(() => {
