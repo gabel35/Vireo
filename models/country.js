@@ -6,5 +6,10 @@ module.exports = (sequelize, DataTypes) => {
     },
     { freezeTableName: true }
   );
+  Country.associate = (models) => {
+    Country.hasMany(models.TopFive, {
+      onDelete: "cascade",
+    });
+  };
   return Country;
 };

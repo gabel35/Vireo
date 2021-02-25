@@ -1,24 +1,5 @@
-//grabbing api info for travel restrictions and appending it//
-$("#countrySpa").on("click", function(event) {
-    event.preventDefault();
-    var countryName = $("#countrySpa").text();
-    console.log(countryName);
-})
-
-$("#countryDR").on("click", function(event) {
-    event.preventDefault();
-    var countryName = $("#countryDR").text();
-    console.log(countryName);
-})
-
-$("#countryRus").on("click", function(event) {
-    event.preventDefault();
-    var countryName = $("#countryRus").text();
-    console.log(countryName);
-})
-
-$("#countryMex").on("click", function(event) {
-    event.preventDefault();
-    var countryName = $("#countryMex").text();
-    console.log(countryName);
-})
+const countries = document.querySelectorAll(".countries").forEach((button) => {
+  button.addEventListener("click", function (e) {
+    location.href = `/country/${e.target.innerText}`;
+  });
+});
