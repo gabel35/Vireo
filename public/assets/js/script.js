@@ -21,5 +21,5 @@ function changeImage() {
   } else if (index < 0) {
     index = img.length - 1;
   }
-  imgs.style.transform = `translateX(${-index * 500}px)`;
+  imgs.style.transform = `translateY(${-index * 500}px)`;
 }
