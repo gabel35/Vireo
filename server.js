@@ -5,7 +5,6 @@ const exphbs = require("express-handlebars");
 // const path = require("path");
 require("dotenv").config();
 // Requiring our models for syncing
-const db = require("./models");
 
 const htmlRouter = require("./routes/html-routes.js");
 const authorRouter = require("./routes/author-api-routes.js");
@@ -23,6 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Static directory
+const db = require("./models");
 app.use(express.static("views"));
 app.use(express.static(__dirname + "/public"));
 

@@ -1,10 +1,10 @@
 const museums = require("../public/assets/js/top5museums.js");
 console.log(`Hello world ${museums}`);
+
 // Routes
 module.exports = (app) => {
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
-  // rid of line 8
   app.get("/", (req, res) => res.render("home", { museums: museums }));
 
   // blog route loads blog.handlebars
