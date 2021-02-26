@@ -20,7 +20,7 @@ module.exports = (app) => {
         { name: "Can Fabes", category: "restaurants", CountryId: 1 },
         { name: "Martin Berasategui", category: "restaurants", CountryId: 1 },
         { name: "La Sagrada Familia", category: "sights", CountryId: 1 },
-        { name: "The Great Mosque of Cordoba (Mezquita)", category: "sights", CountryId: 1 },
+        { name: "Mezquita de Córdoba", category: "sights", CountryId: 1 },
         { name: "Alhambra", category: "sights", CountryId: 1 },
         { name: "Park Guell", category: "sights", CountryId: 1 },
         { name: "Cave of Altamira", category: "sights", CountryId: 1 },
