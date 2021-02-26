@@ -70,17 +70,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // "Go to posts" link
     const postsLink = document.createElement("td");
-    postsLink.innerHTML = `<td><a class='btn btn-info' href='/blog?author_id=${authorData.id}'>Go to Posts</a></td>`;
+    postsLink.innerHTML = `<td><a class='btn btn create container' href='/blog?author_id=${authorData.id}'>Go to Posts</a></td>`;
     tr.appendChild(postsLink);
 
     // "Create a post" link
     const createLink = document.createElement("td");
-    createLink.innerHTML = `<td><a class='btn btn-info' href='/cms?author_id=${authorData.id}'>Create a Post</a></td>`;
+    createLink.innerHTML = `<td><a class='btn btn create container' href='/cms?author_id=${authorData.id}'>Create a Post</a></td>`;
     tr.appendChild(createLink);
 
     // "Delete author" link
     const deleteLink = document.createElement("td");
-    deleteLink.innerHTML = `<td><a style='cursor:pointer;color:white' class='delete-author btn btn-danger'>Delete Author</a></td>`;
+    deleteLink.innerHTML = `<td><a class='delete-author btn create container'>Delete Author</a></td>`;
     deleteLink.addEventListener("click", handleDeleteButtonPress);
     tr.appendChild(deleteLink);
 
@@ -91,8 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Helper function to render content when there are no authors
   const renderEmpty = () => {
     const alertDiv = document.createElement("div");
-    alertDiv.classList.add("alert", "alert-danger");
-    alertDiv.textContent = "Must have at least one author to post";
+    alertDiv.classList.add("alert", "alert-info");
+    alertDiv.textContent = "Must have at least one author to start the blog!";
     alertDiv.id = "removeMe";
     alertDiv.style.marginRight = "5px";
     return alertDiv;
