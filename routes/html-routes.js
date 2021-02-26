@@ -35,6 +35,8 @@ module.exports = (app) => {
         res.render("home", {
           hi: "hello",
           sights: sights,
+          museums: museums,
+          restaurants: restaurants,
           allCountries: countries,
         });
       });
