@@ -18,20 +18,25 @@ module.exports = (app) => {
       where: { name: req.params.country },
       include: [db.TopFive],
     }).then((dbCountry) => {
-      // const museums = [];
-      // const sights = [];
-      // const restaurants = [];
-      // dbCountry.TopFives.forEach((tops) => {
-      //   if (tops.dataValues.category === "museums") {
-      //     museums.push(tops);
-      //   } else if (tops.dataValues.category === "restaurants") {
-      //     restaurants.push(tops);
-      //   } else {
-      //     sights.push(tops);
-      //   }
-      // });
-      res.render("home", {
-        hi: "hello",
+      const museums = [];
+      const sights = [];
+      const restaurants = [];
+      dbCountry.TopFives.forEach((tops) => {
+        if (tops.dataValues.category === "museums") {
+          museums.push(tops);
+        } else if (tops.dataValues.category === "restaurants") {
+          restaurants.push(tops);
+        } else {
+          sights.push(tops);
+        }
+        console.log(sights);
+      });
+      db.Country.findAll({}).then((countries) => {
+        res.render("home", {
+          hi: "hello",
+          sights: sights,
+          allCountries: countries,
+        });
       });
     });
   });
@@ -43,20 +48,4 @@ module.exports = (app) => {
 
   // authors route loads author-manager.html
   app.get("/authors", (req, res) => res.render("author-manager"));
-
-  app.get("/signup", function (req, res) {
-    // If the user already has an account send them to the members page
-    // if (req.user) {
-    //   res.redirect("/members");
-    // }
-    res.render("signup");
-  });
-
-  app.get("/login", function (req, res) {
-    // If the user already has an account send them to the members page
-    // if (req.user) {
-    //   res.redirect("/members");
-    // }
-    res.render("login");
-  });
 };

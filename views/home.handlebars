@@ -18,7 +18,13 @@
 
 <hr>
 
-<div class="carousel">
+
+
+<div class="container-sm container-md container-lg container-xl">
+    <!-- Pictures -->
+    <div class="row ">
+        <div class="col-lg-4">
+            <div class="carousel">
     <div class="image-container" id="imgs">
         <img src="/assets/img/Russia/Russia(1).jpg" alt="#">
         <img src="/assets/img/Russia/Russia(2).jpg" alt="#">
@@ -26,14 +32,6 @@
         <img src="/assets/img/Russia/Russia(4).jpg" alt="#">
     </div>
 </div>
-
-<div class="container-sm container-md container-lg container-xl">
-    <!-- Pictures -->
-    <div class="row ">
-        <div class="col-lg-4">
-            {{!-- <img class="img-fluid hover" src="assets/img/vireo.png" alt="#">
-            <img class="img-fluid hover" src="assets/img/oregon.jpg" alt="#">
-            <img class="img-fluid hover" src="assets/img/oregon.jpg" alt="#"> --}}
         </div>
         <!-- Country info -->
         <div class="col-lg-4">
@@ -77,7 +75,9 @@
                     <h1 class="card-title">Top 5 Sightseeing Spots</h1>
                     <div class="card-body">
                         <ul>
-    
+                            {{#each sights}}
+                            <li>{{dataValues.name}}</li>
+                            {{/each}}
                         </ul>
                     </div>
                 </div>
