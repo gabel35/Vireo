@@ -9,21 +9,22 @@ module.exports = (app) => {
     db.Country.create({ name: "Mexico" });
     db.Country.create({ name: "Dominican Republic" }).then((res) => {
       const top5s = [
-        { name: "Moma", category: "museums", CountryId: 1 },
-        { name: "Natural History", category: "museums", CountryId: 1 },
-        { name: "Whitney", category: "museums", CountryId: 1 },
-        { name: "All", category: "museums", CountryId: 1 },
-        { name: "None", category: "museums", CountryId: 1 },
-        { name: "Linguini", category: "restaurants", CountryId: 1 },
-        { name: "Pizza", category: "restaurants", CountryId: 1 },
-        { name: "Bread", category: "restaurants", CountryId: 1 },
-        { name: "Olives", category: "restaurants", CountryId: 1 },
-        { name: "Ceviche", category: "restaurants", CountryId: 1 },
-        { name: "overlook", category: "sights", CountryId: 1 },
-        { name: "mountain top", category: "sights", CountryId: 1 },
-        { name: "sea view", category: "sights", CountryId: 1 },
-        { name: "forest", category: "sights", CountryId: 1 },
-        { name: "church", category: "sights", CountryId: 1 },
+        { name: "El Prado", category: "museums", CountryId: 1 },
+        { name: "Museu Nacional d'Art de Catalunya", category: "museums", CountryId: 1 },
+        { name: "Museo Guggenheim Bilbao", category: "museums", CountryId: 1 },
+        { name: "Teatre-Museu Dalí", category: "museums", CountryId: 1 },
+        { name: "Ciutat de les Arts i les Ciències", category: "museums", CountryId: 1 },
+        { name: "El Bulli", category: "restaurants", CountryId: 1 },
+        { name: "Mugaritz", category: "restaurants", CountryId: 1 },
+        { name: "Arzak", category: "restaurants", CountryId: 1 },
+        { name: "Can Fabes", category: "restaurants", CountryId: 1 },
+        { name: "Martin Berasategui", category: "restaurants", CountryId: 1 },
+        { name: "La Sagrada Familia", category: "sights", CountryId: 1 },
+        { name: "Mezquita de Córdoba", category: "sights", CountryId: 1 },
+        { name: "Alhambra", category: "sights", CountryId: 1 },
+        { name: "Park Guell", category: "sights", CountryId: 1 },
+        { name: "Cave of Altamira", category: "sights", CountryId: 1 },
+
       ];
       top5s.forEach((topfives) => {
         db.TopFive.create(topfives);

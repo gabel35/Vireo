@@ -21,20 +21,9 @@
 
 
 <div class="container-sm container-md container-lg container-xl">
-    <!-- Pictures -->
-    <div class="row ">
-        <div class="col-lg-4">
-            <div class="carousel">
-    <div class="image-container" id="imgs">
-        <img src="/assets/img/Russia/Russia(1).jpg" alt="#">
-        <img src="/assets/img/Russia/Russia(2).jpg" alt="#">
-        <img src="/assets/img/Russia/Russia(3).jpg" alt="#">
-        <img src="/assets/img/Russia/Russia(4).jpg" alt="#">
-    </div>
-</div>
-        </div>
-        <!-- Country info -->
-        <div class="col-lg-4">
+    <!-- Restrictions -->
+    <div class="row">
+        <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
                     <h1 class="card-title">Travel Restrictions</h1>
@@ -43,7 +32,23 @@
                     </div>
                 </div>
             </div>
-             <div class="card">
+        </div>
+    </div>
+    {{!-- Pictures --}}
+    <div class="row ">
+        <div class="col-lg-7">
+            <div class="carousel">
+                <div class="image-container" id="imgs">
+                    <img src="/assets/img/Russia/Russia(1).jpg" alt="#">
+                    <img src="/assets/img/Russia/Russia(2).jpg" alt="#">
+                    <img src="/assets/img/Russia/Russia(3).jpg" alt="#">
+                    <img src="/assets/img/Russia/Russia(4).jpg" alt="#">
+                </div>
+            </div>
+        </div>
+         <!-- Country info -->
+        <div class="col-lg-5">
+             <div class="card" style="margin: 10px;">
                 <div class="card-body">
                     <h1 class="card-title">Currency</h1>
                     <div class="card-body">
@@ -52,7 +57,7 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-body">
+                <div class="card-body" style="margin: 10px;">
                     <h1 class="card-title">Language: </h1>
                     <div class="card-body">
                         (translated key phrases)
@@ -60,7 +65,7 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-body">
+                <div class="card-body" style="margin: 10px;">
                     <h1 class="card-title">Fun Fact</h1>
                     <div class="card-body">
                         (fun facts)
@@ -68,7 +73,9 @@
                 </div>
             </div>
         </div>
-        <!-- Top 5 lists -->
+    </div>
+     <!-- Top 5 lists -->
+    <div class="row">
         <div class="col-lg-4">
             <div class="card">
                 <div class="card-body">
@@ -82,27 +89,34 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="col-lg-4">
             <div class="card">
                 <div class="card-body">
                     <h1 class="card-title">Top 5 Restaurants</h1>
                     <div class="card-body">
                         <ul>
-                           {{!-- asdasd --}}
+                            {{#each restaurants}}
+                            <li>{{dataValues.name}}</li>
+                            {{/each}}
                         </ul>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="col-lg-4">
             <div class="card">
                 <div class="card-body">
                     <h1 class="card-title">Top 5 Museums</h1>
                     <div class="card-body">
                         <ul>
-                         {{!-- sdaflkjasd;l --}}
+                            {{#each museums}}
+                            <li>{{dataValues.name}}</li>
+                            {{/each}}
                         </ul>
                     </div>
                 </div>
             </div>
-           
         </div>
     </div>
 </div>
