@@ -1,13 +1,13 @@
 const db = require("../models");
 
 module.exports = (app) => {
-  app.get("/s", (req, res) => {
+  app.get("/s", (req, response) => {
     db.Country.create({ name: "Spain" });
     db.Country.create({ name: "France" });
     db.Country.create({ name: "United States" });
     db.Country.create({ name: "Russia" });
     db.Country.create({ name: "Mexico" });
-    db.Country.create({ name: "Dominican Republic" }).then((res) => {
+    db.Country.create({ name: "Italy" }).then((res) => {
       const top5s = [
         //SPAIN
         { name: "El Prado", category: "museums", CountryId: 1 },
@@ -46,23 +46,23 @@ module.exports = (app) => {
         { name: "Arc de Triomphe", category: "sights", CountryId: 2 },
         { name: "Lascaux", category: "sights", CountryId: 2 },
         //UNITED STATES
-        { name: "El Prado", category: "museums", CountryId: 3 },
-        { name: "Museu Nacional d'Art de Catalunya", category: "museums", CountryId: 3 },
-        { name: "Museo Guggenheim Bilbao", category: "museums", CountryId: 3 },
-        { name: "Teatre-Museu Dalí", category: "museums", CountryId: 3 },
-        { name: "Ciutat de les Arts i les Ciències", category: "museums", CountryId: 3 },
+        { name: "EUS", category: "museums", CountryId: 3 },
+        { name: "US", category: "museums", CountryId: 3 },
+        { name: "US", category: "museums", CountryId: 3 },
+        { name: "US", category: "museums", CountryId: 3 },
+        { name: "US", category: "museums", CountryId: 3 },
 
-        { name: "El Bulli", category: "restaurants", CountryId: 3 },
-        { name: "Mugaritz", category: "restaurants", CountryId: 3 },
-        { name: "Arzak", category: "restaurants", CountryId: 3 },
-        { name: "Can Fabes", category: "restaurants", CountryId: 3 },
-        { name: "Martin Berasategui", category: "restaurants", CountryId: 3 },
+        { name: "US", category: "restaurants", CountryId: 3 },
+        { name: "US", category: "restaurants", CountryId: 3 },
+        { name: "US", category: "restaurants", CountryId: 3 },
+        { name: "US", category: "restaurants", CountryId: 3 },
+        { name: "US", category: "restaurants", CountryId: 3 },
 
-        { name: "La Sagrada Familia", category: "sights", CountryId: 3 },
-        { name: "Mezquita de Córdoba", category: "sights", CountryId: 3 },
-        { name: "Alhambra", category: "sights", CountryId: 3 },
-        { name: "Park Guell", category: "sights", CountryId: 3 },
-        { name: "Cave of Altamira", category: "sights", CountryId: 3 },
+        { name: "US", category: "sights", CountryId: 3 },
+        { name: "US", category: "sights", CountryId: 3 },
+        { name: "US", category: "sights", CountryId: 3 },
+        { name: "US", category: "sights", CountryId: 3 },
+        { name: "US", category: "sights", CountryId: 3 },
         //RUSSIA
         { name: "State Hermitage Museum", category: "museums", CountryId: 4 },
         { name: "Armory Museum", category: "museums", CountryId: 4 },
@@ -99,7 +99,7 @@ module.exports = (app) => {
         { name: "Alhambra", category: "sights", CountryId: 5 },
         { name: "Park Guell", category: "sights", CountryId: 5 },
         { name: "Cave of Altamira", category: "sights", CountryId: 5 },
-        //DOMINICAN REPUBLIC
+        //ITALY
         { name: "El Prado", category: "museums", CountryId: 6 },
         { name: "Museu Nacional d'Art de Catalunya", category: "museums", CountryId: 6 },
         { name: "Museo Guggenheim Bilbao", category: "museums", CountryId: 6 },
@@ -118,8 +118,15 @@ module.exports = (app) => {
         { name: "Park Guell", category: "sights", CountryId: 6 },
         { name: "Cave of Altamira", category: "sights", CountryId: 6 },
       ];
-      top5s.forEach((topfives) => {
-        db.TopFive.create(topfives);
+      top5s.forEach((topfives, index) => {
+        if (index === top5s.length -1) {
+          console.log("it hit")
+          db.TopFive.create(topfives).then(() => {
+            response.redirect("/");
+          })
+        } else {
+          db.TopFive.create(topfives);
+        };
       });
     });
   });
