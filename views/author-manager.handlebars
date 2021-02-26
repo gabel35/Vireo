@@ -1,5 +1,21 @@
-	<h1>Authors</h1>
+	<div>
+		<h4>create a new account to manage your posts </h4> 
+		 {{!-- <h4 class="sentence">hello
+    <div class="slidingHorizontal">
+      <span>create</span>
+      <span>an</span>
+      <span>account</span>
+      <span>to</span>
+      <span>manage</span>
+	  <span>your</span>
+	  <span>posts</span>
+    </div>
+  </h4> --}}
   
+
+
+	</div>
+  <br>
   <div class="container">
 		<div class="row">
 			<div class="col-md-8 offset-md-2">
@@ -8,25 +24,27 @@
 						<tr id="form-row">
 							<form id="author-form" style="display: flex" class="form-btn">
 								<td colspan="4">
-									<input placeholder="Enter a name" id="author-name" type="text" />
+									<input placeholder="enter your name" id="author-name" type="text" />
 								</td>
-								<td><button type="submit" class="btn btn-info" id="submit-author">Create
+								<td><button type="submit" class="btn btn book" id="submit-author">Create
 										Author</button>
 								</td>
 							</form>
 						</tr>
 					</tbody>
+
+					<br>
 				</div>
 				<div class="author-container">
-					<table class="table table-striped">
+					<table class="table table-bordered">
 						<thead>
-							<tr>
-								<th>Name</th>
-								<th># of Posts</th>
-								<th>See Author's Posts</th>
-								<th>New Post</th>
-								<th>Delete Author</th>
-							</tr>
+							{{!-- <tr>
+								<th>username</th>
+								<th>posts</th>
+								<th>see all posts</th>
+								<th>new post</th>
+								<th>delete author</th>
+							</tr> --}}
 						</thead>
 						<tbody>
 							<tr id="form-row">
