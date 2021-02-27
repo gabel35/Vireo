@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Get references to the body, title, form and author
   const bodyInput = document.getElementById("body");
   const titleInput = document.getElementById("title");
+  const userImg = document.getElementById("image");
   const cmsForm = document.getElementById("cms");
   const authorSelect = document.getElementById("author");
 
@@ -35,9 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (data) {
           console.log("Success in getting post:", data);
 
-          // Populate the form for editing
+          // Adding img here **************************************************
           titleInput.value = data.title;
           bodyInput.value = data.body;
+          userImg.value = data.image;
           authorId = data.AuthorId || data.id;
 
           // We are updating
@@ -74,6 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const newPost = {
       title: titleInput.value.trim(),
       body: bodyInput.value.trim(),
+      image: userImg.value.trim(),
       AuthorId: authorSelect.value,
     };
 
