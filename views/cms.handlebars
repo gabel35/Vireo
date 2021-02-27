@@ -1,9 +1,9 @@
 <div class="row">
-  <h1 class="text-center">New Post</h1>
-  <div class="col-6 offset-3">
-    <form id="cms">
+  {{!-- <h1 class="text-center">New Post</h1> --}}
+  <div class="col-6 offset-3 table-dark container" style = "border-radius: 15px;">
+    <form id="cms" class = "container" style ="margin-top: 25px;">
       <div class="mb-3">
-        <label class="form-label" for="title">Title</label>
+        <label class="form-label" for="title">Title:</label>
         <input
           autocomplete="off"
           class="form-control"
@@ -12,7 +12,7 @@
         />
       </div>
       <div class="mb-3">
-        <label class="form-label" for="body">Body</label>
+        <label class="form-label" for="body">Body:</label>
         <textarea
           autocomplete="off"
           class="form-control"
@@ -25,7 +25,7 @@
   						</select>
 						</div>
       <div class="mb-3">
-        <button type="submit" class="btn btn-info submit">Add Post</button>
+        <button type="submit" class="btn submit book">Add Post</button>
       </div>
     </form>
   </div>
