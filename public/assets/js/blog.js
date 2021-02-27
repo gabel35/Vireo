@@ -69,6 +69,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const newPostCard = document.createElement("div");
     newPostCard.classList.add("card");
 
+    // Adding img here **************************************************
+    const newPostImg = document.createElement("img");
+    newPostImg.classList.add("card-img-top");
+    newPostImg.setAttribute("src", post.image);
+
     const newPostCardHeading = document.createElement("div");
     newPostCardHeading.classList.add("card-body");
 
@@ -87,17 +92,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const newPostTitle = document.createElement("h1");
     const newPostDate = document.createElement("small");
     const newPostAuthor = document.createElement("h5");
+    // Adding img here **************************************************
 
     newPostAuthor.textContent = `Written by: ${post.Author.name}`;
     newPostAuthor.style.float = "right";
-    newPostAuthor.style.color = "blue";
+    newPostAuthor.style.color = "#025955";
     newPostAuthor.style.marginTop = "-10px";
 
     const newPostCardBody = document.createElement("div");
     newPostCardBody.classList.add("card-body");
 
-    const newPostBody = document.createElement("div");
-    newPostBody.classList.add("card-body");
+    newPostCard.append(newPostImg);
+    const newPostBody = document.createElement("p");
+    newPostBody.classList.add("card-text");
     newPostTitle.textContent = `${post.title} `;
     newPostBody.textContent = post.body;
     newPostDate.textContent = ` (${formattedDate})`;
