@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-body center">
-        <h5 class="card-title logo"><img class="img-fluid hover" style="width:75px;" src="assets/img/vireo.png"
+        <h5 class="card-title logo"><img class="img-fluid hover" style="width:75px;" src="/assets/img/vireo.png"
                 alt="#">Vireo</h5>
         <h1 class="card-text">what's your next adventure?</h1>
          <h2 class="sentence card-text">I'm going to
@@ -23,30 +23,24 @@
 <div class="container-sm container-md container-lg container-xl">
     <!-- Restrictions -->
     <div class="row">
-        <div class="col-lg-12">
-            <div class="card">
-                <div class="card-body">
-                    <h1 class="card-title">Travel Restrictions</h1>
+        <div class="col-lg-6" id="restrictionsDiv"></div>
+        <!-- Country info -->
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-12"id="currencyDiv"></div>
+            </div> 
+            <div class="row">
+                <div class="col-lg-12">
+                <div class="card" id="keyPhrases" style="visibility: hidden">
                     <div class="card-body">
-                        (api results)
+                        <h1 class="card-title">Key Phrases: </h1>
+                        <div class="card-body">
+                            {{#each language}}
+                                <p>{{dataValues.name}}</p>
+                            {{/each}}
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <!-- Country info -->
-    <div class="row ">
-        <div class="col-lg-6" id="currencyDiv">
-        </div>
-        <div class="col-lg-6">
-            <div class="card" id="keyPhrases" style="visibility: hidden">
-                <div class="card-body">
-                    <h1 class="card-title">Key Phrases: </h1>
-                    <div class="card-body">
-                        {{#each language}}
-                            <p>{{dataValues.name}}</p>
-                        {{/each}}
-                    </div>
                 </div>
             </div>
         </div>
