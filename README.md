@@ -1,7 +1,7 @@
 # Project_2
 # VIREO travel app
 
-The vireo travel app helps users to get all the information about new destination which will make a trip more enjoable and pleasant.
+The VIREO travel app helps users to get all the information about new destinations which will make a trip more enjoyable and pleasant.
 
 Deployed at: 
 
@@ -10,7 +10,7 @@ Repo:
 
 # Description
 
-Vireo was created to provide an information for users upon request to manage and prepare for their next trip. Users can get a descrpition of a country like the Key Phrases in native language, currency, 5 top restaurants, museums, Sightseeing Spots and a Fun fact. Users can also create a post about their recent trip and read other users posts.
+Vireo was created to provide an information for users upon request to manage and prepare for their next trip. Users can get a descrpition of a country like the Key Phrases in native language, currency, 5 top restaurants, museums, Sightseeing Spots,Fun fact and travel restrictions during COVID-19(future development). Users can also create a post about their recent trip and read other users posts.
 <br />
 When users access the app, they should choose a country on the main page. After choosing a country, they will be given all the information. If users create a new author, they can create a post, navigate to the post page, see their posts and from other users. The post can be updated or deleted.
 
