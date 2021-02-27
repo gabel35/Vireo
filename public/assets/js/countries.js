@@ -53,17 +53,17 @@ const loadContent = () => {
 }
 
 
-const loadRestrictions = () => {
-  var queryURL = "https://api.traveladviceapi.com/search/US";
-  var token = "6d57e619-56bb-4b79-a97c-e90513baae63";
-  $.ajax({
-      url: queryURL,
-      method: "GET",  
-      beforeSend: function (xhr) {
-        xhr.setRequestHeader('x-access-token', token);
-      },
-  }).then(function(response){
-      console.log(response);
+// const loadRestrictions = () => {
+//   var queryURL = "https://api.traveladviceapi.com/search/US";
+//   var token = "6d57e619-56bb-4b79-a97c-e90513baae63";
+//   $.ajax({
+//       url: queryURL,
+//       method: "GET",  
+//       beforeSend: function (xhr) {
+//         xhr.setRequestHeader('x-access-token', token);
+//       },
+//   }).then(function(response){
+//       console.log(response);
         
-  });
-}
+//   });
+// }
