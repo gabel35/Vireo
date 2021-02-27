@@ -22,7 +22,6 @@ const loadCurrency = countryName => {
       method: "GET",
   }).then(function(response){
     var curDiv = $("#currencyDiv");
-    console.log(response);
     var countryCurrency = {
       code: response[0].currencies[0].code,
       name: response[0].currencies[0].name,
@@ -69,7 +68,6 @@ const loadRestrictions = countryName => {
   } else {
     var countryCode = "US";
   };
-  console.log(countryCode)
   var queryURL = "https://api.traveladviceapi.com/search/" + countryCode;
   var token = "6d57e619-56bb-4b79-a97c-e90513baae63";
   $.ajax({
@@ -79,7 +77,6 @@ const loadRestrictions = countryName => {
         xhr.setRequestHeader('x-access-token', token);
       },
   }).then(function(response){
-      console.log(response);
       var resDiv = $("#restrictionsDiv");
     
       var countryRestrictions = {
