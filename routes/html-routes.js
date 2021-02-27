@@ -21,13 +21,19 @@ module.exports = (app) => {
       const museums = [];
       const sights = [];
       const restaurants = [];
+      const language = [];
+      const funfact = [];
       dbCountry.TopFives.forEach((tops) => {
         if (tops.dataValues.category === "museums") {
           museums.push(tops);
         } else if (tops.dataValues.category === "restaurants") {
           restaurants.push(tops);
-        } else {
+        } else if (tops.dataValues.category === "sights") {
           sights.push(tops);
+        } else if (tops.dataValues.category === "language") {
+          language.push(tops);
+        } else {
+          funfact.push(tops);
         }
         console.log(sights);
       });
@@ -37,6 +43,8 @@ module.exports = (app) => {
           sights: sights,
           museums: museums,
           restaurants: restaurants,
+          language: language,
+          funfact: funfact,
           allCountries: countries,
         });
       });
