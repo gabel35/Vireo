@@ -11,6 +11,7 @@ $(document).ready(() => {
   if (pathArray[2]) {
     loadCurrency(pathArray[2]);
     loadContent(pathArray[2]);
+    loadRestrictions(pathArray[2])
   }
 });
 
@@ -30,11 +31,12 @@ const loadCurrency = countryName => {
           var appendCur = `
           <div class="card" style="margin: 10px;">
             <div class="card-body">
-                <h1 class="card-title">Currency</h1>
+                <h1 class="card-title">Currency Information</h1>
                 <div class="card-body">
-                  <p> Code: ${countryCurrency.code}</p>
-                  <p> Name: ${countryCurrency.name}</p>
-                  <p> Symbol: ${countryCurrency.symbol}</p>
+                  <p> ${countryName} uses the ${countryCurrency.name} (${countryCurrency.symbol})
+                  <a href="https://gabel35.github.io/Spyglass/" target="_blank">
+                    <button class="btn book">Currency Converter</button>
+                  </a>
                 </div>
             </div>
           </div>
@@ -44,18 +46,24 @@ const loadCurrency = countryName => {
 }
 
 const loadContent = () => {
-  var kpDiv = $("#keyPhrases");
-  var appendPhrases =`
-    <div class="card">
-      <div class="card-body">
-          <h1 class="card-title">Key Phrases: </h1>
-          <div class="card-body">
-              {{#each language}}
-                  <p>{{dataValues.name}}</p>
-              {{/each}}
-          </div>
-      </div>
-    </div>
-    `;
-  kpDiv.append(appendPhrases)
+  $("#keyPhrases").attr("style", "visibility: "); 
+  $(".topFive").attr("style", "visibility: ");           
+  $("#funFact").attr("style", "visibility: ");
+  $("#btnDiv").attr("style", "visibility: ");
 }
+
+
+// const loadRestrictions = () => {
+//   var queryURL = "https://api.traveladviceapi.com/search/US";
+//   var token = "6d57e619-56bb-4b79-a97c-e90513baae63";
+//   $.ajax({
+//       url: queryURL,
+//       method: "GET",  
+//       beforeSend: function (xhr) {
+//         xhr.setRequestHeader('x-access-token', token);
+//       },
+//   }).then(function(response){
+//       console.log(response);
+        
+//   });
+// }
