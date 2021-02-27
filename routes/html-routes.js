@@ -51,10 +51,10 @@ module.exports = (app) => {
     });
   });
   // blog route loads blog.handlebars
-  app.get("/blog", (req, res) => res.render("Blog"));
+  app.get("/blog", (req, res) => res.render("blog"));
 
   // new post route that loads new.handlebars
-  app.get("/cms", (req, res) => res.render("Cms"));
+  app.get("/cms", (req, res) => res.render("cms"));
 
   // authors route loads author-manager.html
   app.get("/authors", (req, res) => res.render("author-manager"));

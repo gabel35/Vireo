@@ -38,14 +38,24 @@
     <div class="row ">
         <div class="col-lg-6" id="currencyDiv">
         </div>
-        <div class="col-lg-6" id="keyPhrases">
+        <div class="col-lg-6">
+            <div class="card" id="keyPhrases" style="visibility: hidden">
+                <div class="card-body">
+                    <h1 class="card-title">Key Phrases: </h1>
+                    <div class="card-body">
+                        {{#each language}}
+                            <p>{{dataValues.name}}</p>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
      <!-- Top 5 lists -->
     <div class="row">
         <div class="col-lg-4">
-            <div class="card">
+            <div class="card topFive" style="visibility: hidden">
                 <div class="card-body">
                     <h1 class="card-title">Top 5 Sightseeing Spots</h1>
                     <div class="card-body">
@@ -59,7 +69,7 @@
             </div>
         </div>
         <div class="col-lg-4">
-            <div class="card">
+            <div class="card topFive" style="visibility: hidden">
                 <div class="card-body">
                     <h1 class="card-title">Top 5 Restaurants</h1>
                     <div class="card-body">
@@ -73,7 +83,7 @@
             </div>
         </div>
         <div class="col-lg-4">
-            <div class="card">
+            <div class="card topFive" style="visibility: hidden">
                 <div class="card-body">
                     <h1 class="card-title">Top 5 Museums</h1>
                     <div class="card-body">
@@ -90,7 +100,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <div class="card">
+            <div class="card" id="funFact" style="visibility: hidden">
                 <div class="card-body">
                     <h1 class="card-title">Fun Fact</h1>
                     <div class="card-body">
@@ -104,7 +114,7 @@
     </div>
 </div>
 
-<div class="wrapper">
+<div class="wrapper" id="btnDiv" style="visibility: hidden">
     <a href="https://google.com/hotels" target="_blank">
         <button class="btn book">Book a Hotel</button>
     </a>
