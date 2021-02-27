@@ -2,12 +2,12 @@ const db = require("../models");
 
 module.exports = (app) => {
   app.get("/s", (req, response) => {
-    db.Country.create({ name: "Spain" });
-    db.Country.create({ name: "France" });
-    db.Country.create({ name: "United States" });
-    db.Country.create({ name: "Russia" });
-    db.Country.create({ name: "Mexico" });
-    db.Country.create({ name: "Italy" }).then((res) => {
+    db.Country.create({ name: "Spain", id: 1 });
+    db.Country.create({ name: "France", id: 2 });
+    db.Country.create({ name: "United States", id: 3 });
+    db.Country.create({ name: "Russia", id: 4 });
+    db.Country.create({ name: "Mexico", id: 5 });
+    db.Country.create({ name: "Italy", id: 6 }).then((res) => {
       const top5s = [
         //SPAIN
         { name: "El Prado", category: "museums", CountryId: 1 },
@@ -27,6 +27,12 @@ module.exports = (app) => {
         { name: "Alhambra", category: "sights", CountryId: 1 },
         { name: "Park Guell", category: "sights", CountryId: 1 },
         { name: "Cave of Altamira", category: "sights", CountryId: 1 },
+        
+        { name: "Gracias - 'Thank you'", category: "language", CountryId: 1 },
+        { name: "Disculpe - 'Excuse Me'", category: "language", CountryId: 1 },
+        { name: "¿Puedo usar el baño? – 'Can I use the bathroom?'", category: "language", CountryId: 1 },
+
+        { name: "La Sagrada Familia", category: "funfact", CountryId: 1 },
         //FRANCE
         { name: "Musée du Louvre", category: "museums", CountryId: 2 },
         { name: "Musée national d'Art moderne", category: "museums", CountryId: 2 },
@@ -45,6 +51,12 @@ module.exports = (app) => {
         { name: "Cathédrale Notre-Dame", category: "sights", CountryId: 2 },
         { name: "Arc de Triomphe", category: "sights", CountryId: 2 },
         { name: "Lascaux", category: "sights", CountryId: 2 },
+
+        { name: "Gracias - 'Thank you'", category: "language", CountryId: 2 },
+        { name: "Disculpe - 'Excuse Me'", category: "language", CountryId: 2 },
+        { name: "¿Puedo usar el baño? – 'Can I use the bathroom?'", category: "language", CountryId: 2 },
+
+        { name: "La Sagrada Familia", category: "funfact", CountryId: 2 },
         //UNITED STATES
         { name: "EUS", category: "museums", CountryId: 3 },
         { name: "US", category: "museums", CountryId: 3 },
@@ -63,6 +75,12 @@ module.exports = (app) => {
         { name: "US", category: "sights", CountryId: 3 },
         { name: "US", category: "sights", CountryId: 3 },
         { name: "US", category: "sights", CountryId: 3 },
+
+        { name: "Gracias - 'Thank you'", category: "language", CountryId: 3 },
+        { name: "Disculpe - 'Excuse Me'", category: "language", CountryId: 3 },
+        { name: "¿Puedo usar el baño? – 'Can I use the bathroom?'", category: "language", CountryId: 3 },
+
+        { name: "La Sagrada Familia", category: "funfact", CountryId: 3 },
         //RUSSIA
         { name: "State Hermitage Museum", category: "museums", CountryId: 4 },
         { name: "Armory Museum", category: "museums", CountryId: 4 },
@@ -81,6 +99,12 @@ module.exports = (app) => {
         { name: "St. Basil's Cathedral", category: "sights", CountryId: 4 },
         { name: "Winter Palace", category: "sights", CountryId: 4 },
         { name: "Mount Elbrus", category: "sights", CountryId: 4 },
+
+        { name: "Gracias - 'Thank you'", category: "language", CountryId: 4 },
+        { name: "Disculpe - 'Excuse Me'", category: "language", CountryId: 4 },
+        { name: "¿Puedo usar el baño? – 'Can I use the bathroom?'", category: "language", CountryId: 4 },
+
+        { name: "La Sagrada Familia", category: "funfact", CountryId: 4 },
         //MEXICO
         { name: "El Prado", category: "museums", CountryId: 5 },
         { name: "Museu Nacional d'Art de Catalunya", category: "museums", CountryId: 5 },
@@ -99,6 +123,12 @@ module.exports = (app) => {
         { name: "Alhambra", category: "sights", CountryId: 5 },
         { name: "Park Guell", category: "sights", CountryId: 5 },
         { name: "Cave of Altamira", category: "sights", CountryId: 5 },
+
+        { name: "Gracias - 'Thank you'", category: "language", CountryId: 5 },
+        { name: "Disculpe - 'Excuse Me'", category: "language", CountryId: 5 },
+        { name: "¿Puedo usar el baño? – 'Can I use the bathroom?'", category: "language", CountryId: 5 },
+
+        { name: "La Sagrada Familia", category: "funfact", CountryId: 5 },
         //ITALY
         { name: "El Prado", category: "museums", CountryId: 6 },
         { name: "Museu Nacional d'Art de Catalunya", category: "museums", CountryId: 6 },
@@ -117,6 +147,12 @@ module.exports = (app) => {
         { name: "Alhambra", category: "sights", CountryId: 6 },
         { name: "Park Guell", category: "sights", CountryId: 6 },
         { name: "Cave of Altamira", category: "sights", CountryId: 6 },
+        
+        { name: "Gracias - 'Thank you'", category: "language", CountryId: 6 },
+        { name: "Disculpe - 'Excuse Me'", category: "language", CountryId: 6 },
+        { name: "¿Puedo usar el baño? – 'Can I use the bathroom?'", category: "language", CountryId: 6 },
+
+        { name: "La Sagrada Familia", category: "funfact", CountryId: 6 },
       ];
       top5s.forEach((topfives, index) => {
         if (index === top5s.length -1) {

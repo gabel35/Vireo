@@ -36,44 +36,30 @@
     </div>
     {{!-- Pictures --}}
     <div class="row ">
-        <div class="col-lg-7">
-            <div class="carousel">
-                <div class="image-container" id="imgs">
-                    <img src="/assets/img/Russia/Russia(1).jpg" alt="#">
-                    <img src="/assets/img/Russia/Russia(2).jpg" alt="#">
-                    <img src="/assets/img/Russia/Russia(3).jpg" alt="#">
-                    <img src="/assets/img/Russia/Russia(4).jpg" alt="#">
-                </div>
-            </div>
-        </div>
          <!-- Country info -->
-        <div class="col-lg-5">
+        <div class="col-lg-6">
              <div class="card" style="margin: 10px;">
                 <div class="card-body">
                     <h1 class="card-title">Currency</h1>
-                    <div class="card-body">
-                        (API currency)
+                    <div class="card-body" id="currencyDiv">
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="col-lg-6">
             <div class="card">
-                <div class="card-body" style="margin: 10px;">
-                    <h1 class="card-title">Language: </h1>
+                <div class="card-body">
+                    <h1 class="card-title">Key Phrases: </h1>
                     <div class="card-body">
-                        (translated key phrases)
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body" style="margin: 10px;">
-                    <h1 class="card-title">Fun Fact</h1>
-                    <div class="card-body">
-                        (fun facts)
+                        {{#each language}}
+                            <p>{{dataValues.name}}</p>
+                        {{/each}}
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
      <!-- Top 5 lists -->
     <div class="row">
         <div class="col-lg-4">
@@ -83,7 +69,7 @@
                     <div class="card-body">
                         <ul>
                             {{#each sights}}
-                            <li>{{dataValues.name}}</li>
+                                <li>{{dataValues.name}}</li>
                             {{/each}}
                         </ul>
                     </div>
@@ -97,7 +83,7 @@
                     <div class="card-body">
                         <ul>
                             {{#each restaurants}}
-                            <li>{{dataValues.name}}</li>
+                                <li>{{dataValues.name}}</li>
                             {{/each}}
                         </ul>
                     </div>
@@ -111,9 +97,24 @@
                     <div class="card-body">
                         <ul>
                             {{#each museums}}
-                            <li>{{dataValues.name}}</li>
+                                <li>{{dataValues.name}}</li>
                             {{/each}}
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">Fun Fact</h1>
+                    <div class="card-body">
+                        {{#each funfact}}
+                            <p>{{dataValues.name}}</p>
+                        {{/each}}
                     </div>
                 </div>
             </div>
@@ -132,4 +133,4 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/assets/js/countries.js"></script>
-<script src="/assets/js/script.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
