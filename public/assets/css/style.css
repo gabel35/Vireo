@@ -317,6 +317,7 @@ img {
   position: relative;
   font-weight: 900;
   font-size: 4.5em;
+  color:white;
 }
 .ml4 .letters {
   position: absolute;
@@ -325,4 +326,10 @@ img {
   top: 0.3em;
   right: 0;
   opacity: 0; 
+}
+
+
+.ml3 {
+  font-weight: 900;
+  font-size: 50px;
 }
