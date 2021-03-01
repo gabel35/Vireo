@@ -28,6 +28,9 @@ h2 {
   margin: 10px;
   text-align: center;
 }
+h3{
+  
+}
 
 h4 {
   text-align: center;
@@ -36,6 +39,12 @@ h4 {
   font-size: 25px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+
+h5{
+font-size: 22px;
+font-family: 'Caveat', cursive;
+}
+
 td {
   font-weight: bold;
   font-size: 18px;
@@ -304,7 +313,23 @@ img {
 
 
 /* create new author instriction */
+.ml4 {
+  position: relative;
+  font-weight: 900;
+  font-size: 4.5em;
+  color:white;
+}
+.ml4 .letters {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0.3em;
+  right: 0;
+  opacity: 0; 
+}
+
+
 .ml3 {
   font-weight: 900;
-  font-size: 3.5em;
+  font-size: 50px;
 }
