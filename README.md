@@ -45,11 +45,11 @@ WHEN I want to edit or delete my post I can do it from the authors table.
 
 ## Installation
 
-1. Clone the repo and run `npm install` for the required dependencies.
+1. Clone the repo and run `npm install` for the required dependencies. Run `npm start seed` in order to seed the database.
 
 ## Usage
 
-Application will be invoked by using the `node server.js` command in the terminal. Open `https://localhost:3000` in your browser and create some burgers!
+Application will be invoked by using the `node server.js` command in the terminal. Open `https://localhost:3000` in your browser.
 
 # Screenshots
 
