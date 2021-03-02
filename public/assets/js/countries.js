@@ -1,7 +1,11 @@
 const countries = document.querySelectorAll(".countries").forEach((button) => {
   button.addEventListener("click", function (e) {
     location.href = `/country/${e.target.innerText}`;
-    
+ // calling spinner
+
+$("#spinner").removeClass("hide")
+
+// 
     });
 });
 
@@ -9,9 +13,12 @@ $(document).ready(() => {
   let pathname = window.location.pathname;
   var pathArray = pathname.split('/');
   if (pathArray[2]) {
+
+
     loadCurrency(pathArray[2]);
     loadContent(pathArray[2]);
     loadRestrictions(pathArray[2])
+
   }
 });
 
@@ -104,9 +111,17 @@ const loadRestrictions = countryName => {
           </div>
         </div>
       `;
+
+// stop spinner
+
+
+$("#spinner").addClass("hide")
+
   resDiv.append(appendRes);  
   });
 }
+
+
 
 
 
