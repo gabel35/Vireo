@@ -92,7 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const newPostTitle = document.createElement("h1");
     const newPostDate = document.createElement("small");
     const newPostAuthor = document.createElement("h5");
-    // Adding img here **************************************************
 
     newPostAuthor.textContent = `written by: ${post.Author.name}`;
     newPostAuthor.style.float = "right";
@@ -122,7 +121,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return newPostCard;
   };
 
-  // Helper function to display something when there are no posts
   const displayEmpty = (id) => {
     const query = window.location.search;
     let partial = "";
@@ -138,7 +136,6 @@ document.addEventListener("DOMContentLoaded", () => {
     blogContainer.append(messageH2);
   };
 
-  // Handle when we click the delete post button
   const handlePostDelete = (e) => {
     const currentPost = JSON.parse(
       e.target.parentElement.parentElement.dataset.post
@@ -147,7 +144,6 @@ document.addEventListener("DOMContentLoaded", () => {
     deletePost(currentPost.id);
   };
 
-  // Handle when we click the edit post button
   const handlePostEdit = (e) => {
     const currentPost = JSON.parse(
       e.target.parentElement.parentElement.dataset.post
@@ -157,53 +153,60 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 });
 var ml4 = {};
-ml4.opacityIn = [0,1];
+ml4.opacityIn = [0, 1];
 ml4.scaleIn = [0.2, 1];
 ml4.scaleOut = 3;
 ml4.durationIn = 800;
 ml4.durationOut = 600;
 ml4.delay = 500;
 
-anime.timeline({loop: true})
+anime
+  .timeline({ loop: true })
   .add({
-    targets: '.ml4 .letters-1',
+    targets: ".ml4 .letters-1",
     opacity: ml4.opacityIn,
     scale: ml4.scaleIn,
-    duration: ml4.durationIn
-  }).add({
-    targets: '.ml4 .letters-1',
+    duration: ml4.durationIn,
+  })
+  .add({
+    targets: ".ml4 .letters-1",
     opacity: 0,
     scale: ml4.scaleOut,
     duration: ml4.durationOut,
     easing: "easeInExpo",
-    delay: ml4.delay
-  }).add({
-    targets: '.ml4 .letters-2',
+    delay: ml4.delay,
+  })
+  .add({
+    targets: ".ml4 .letters-2",
     opacity: ml4.opacityIn,
     scale: ml4.scaleIn,
-    duration: ml4.durationIn
-  }).add({
-    targets: '.ml4 .letters-2',
+    duration: ml4.durationIn,
+  })
+  .add({
+    targets: ".ml4 .letters-2",
     opacity: 0,
     scale: ml4.scaleOut,
     duration: ml4.durationOut,
     easing: "easeInExpo",
-    delay: ml4.delay
-  }).add({
-    targets: '.ml4 .letters-3',
+    delay: ml4.delay,
+  })
+  .add({
+    targets: ".ml4 .letters-3",
     opacity: ml4.opacityIn,
     scale: ml4.scaleIn,
-    duration: ml4.durationIn
-  }).add({
-    targets: '.ml4 .letters-3',
+    duration: ml4.durationIn,
+  })
+  .add({
+    targets: ".ml4 .letters-3",
     opacity: 0,
     scale: ml4.scaleOut,
     duration: ml4.durationOut,
     easing: "easeInExpo",
-    delay: ml4.delay
-  }).add({
-    targets: '.ml4',
+    delay: ml4.delay,
+  })
+  .add({
+    targets: ".ml4",
     opacity: 0,
     duration: 500,
-    delay: 500
+    delay: 500,
   });

@@ -1,7 +1,4 @@
-// Wait for the DOM to completely load before we run our JS
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM loaded! 🚀");
-
   const nameInput = document.getElementById("author-name");
   const authorList = document.querySelector("tbody");
 
@@ -52,14 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const tr = document.createElement("tr");
     tr.setAttribute("data-author", JSON.stringify(authorData));
 
-    // Set each author's ID on the element itself
     tr.id = authorData.id;
 
     const td = document.createElement("td");
     td.textContent = authorData.name;
     tr.appendChild(td);
 
-    // Element to show how many posts
     const lengthTd = document.createElement("td");
     if (authorData.Posts) {
       lengthTd.textContent = authorData.Posts.length;
@@ -122,7 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        // console.log('Success in getting authors:', authors);
         const rowsToAdd = [];
         for (let i = 0; i < data.length; i++) {
           rowsToAdd.push(createAuthorRow(data[i]));
@@ -133,27 +127,31 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((error) => console.error("Error:", error));
   };
 
-  // Get the list of authors
   getAuthors();
 });
 
 // animated text
 
 // Wrap every letter in a span
-var textWrapper = document.querySelector('.ml3');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+var textWrapper = document.querySelector(".ml3");
+textWrapper.innerHTML = textWrapper.textContent.replace(
+  /\S/g,
+  "<span class='letter'>$&</span>"
+);
 
-anime.timeline({loop: true})
+anime
+  .timeline({ loop: true })
   .add({
-    targets: '.ml3 .letter',
-    opacity: [0,1],
+    targets: ".ml3 .letter",
+    opacity: [0, 1],
     easing: "easeInOutQuad",
     duration: 2250,
-    delay: (el, i) => 150 * (i+1)
-  }).add({
-    targets: '.ml3',
+    delay: (el, i) => 150 * (i + 1),
+  })
+  .add({
+    targets: ".ml3",
     opacity: 0,
     duration: 1000,
     easing: "easeOutExpo",
-    delay: 1000
+    delay: 1000,
   });
