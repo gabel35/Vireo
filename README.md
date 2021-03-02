@@ -1,16 +1,16 @@
 # Project_2
 # VIREO travel app
 
-The VIREO travel app helps users to get all the information about new destinations which will make a trip more enjoyable and pleasant.
+The VIREO travel app helps users to get all the information about new destinations which will make a trip more enjoyable, pleasant, and safe.
 
-Deployed at: 
+Deployed at: [Vireo on Heroku](https://peaceful-peak-47552.herokuapp.com/)
 
-Repo: 
+Repo: [Github Repo for Vireo](https://github.com/gabel35/Vireo)
 
 
 # Description
 
-Vireo was created to provide an information for users upon request to manage and prepare for their next trip. Users can get a descrpition of a country like the Key Phrases in native language, currency, 5 top restaurants, museums, Sightseeing Spots,Fun fact and travel restrictions during COVID-19(future development). Users can also create a post about their recent trip and read other users posts.
+Vireo was created to provide information for users upon request to manage and prepare for their next trip. Users can get a descrpition of a country like the Key Phrases in native language, currency, 5 top restaurants, museums, Sightseeing Spots,Fun fact and travel restrictions during COVID-19(future development). Users can also create a post about their recent trip and read other users posts.
 <br />
 When users access the app, they should choose a country on the main page. After choosing a country, they will be given all the information. If users create a new author, they can create a post, navigate to the post page, see their posts and from other users. The post can be updated or deleted.
 
@@ -33,8 +33,7 @@ THEN I am given an option to create a new author and post my thoughts about rece
 WHEN I want to edit or delete my post I can do it from the authors table.
 
 # Screenshots
-
-
+![Vireo](./public/assets/img/vireo_screenshot.PNG)
 
 # Packages, APIs, and Technologies:
 
@@ -49,12 +48,13 @@ For this project we used:
 - Google Fonts
 
 
-APIs
+APIs:
 
-restcountries (for currency)
+[restcountries](https://restcountries.eu/#api-endpoints-language) (for currency)
+[TravelAdvice API](https://traveladviceapi.com/) (for travel restrictions)
 
 
 # Division:
 - Jonathan - Back-end - @jongomezdev 
 - Gabriel - Back & Front-end - @Gabel35
-- Kristina- Front-end - @kiankovskaia
+- Kristina- Front-end and Presentation- @kiankovskaia
