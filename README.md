@@ -49,7 +49,7 @@ WHEN I want to edit or delete my post I can do it from the authors table.
 
 ## Usage
 
-Application will be invoked by using the `node server.js` command in the terminal. Open `https://localhost:3000` in your browser.
+Application will be invoked by using the `node server.js` command in the terminal. Open `https://localhost:8080` in your browser.
 
 # Screenshots
 
