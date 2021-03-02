@@ -76,7 +76,7 @@ const loadRestrictions = countryName => {
     var countryCode = "US";
   };
   var queryURL = "https://api.traveladviceapi.com/search/" + countryCode;
-  var token = "6d57e619-56bb-4b79-a97c-e90513baae63";
+  var token = "4bd81931-629b-4f73-88e9-64c8e94475d9";
   $.ajax({
       url: queryURL,
       method: "GET",  
